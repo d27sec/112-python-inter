@@ -1,0 +1,24 @@
+h2 {
+    text-align: center;
+    color: brown;
+}
+
+.card {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.card-title {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.card-price{
+    font-size: 18px;
+    color: rgb(5, 155, 5);
+    font-weight: 500;
+}
+
+.card .btn {
+    float: right;
+}

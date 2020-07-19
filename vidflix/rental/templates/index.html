@@ -1,0 +1,35 @@
+
+{% extends 'layout.html' %}
+
+{% block content%}
+        <h1>Welcome to {{ title }} </h1>
+        <h3>To the Better Blockbuster that wont disappoint your kids when it goes out of business</h3>
+
+
+        <!-- <ul>
+            {% for m in movies %}
+                <li>{{m.title}}</li>
+                <img src="{{m.image_url}}" alt="">
+            {% endfor %}
+        </ul> -->
+        <table class='table table-striped'>
+            <thead class="thead-dark">
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>RELEASE YEAR</th>
+                <th>GENRE</th>
+                <th>AVALAIBLE</th>
+            </thead>
+        <tbody class="table-striped">
+                {% for m in movies %}
+        <tr>
+            <td>{{m.title}}<img style="max-height: 200px; width: 150px;" id="img-size" src="{{m.image_url}}">  </td>
+            <td>${{m.price}}0</td>
+            <td>{{m.release_year}}</td>
+            <td>{{m.genre}}</td>
+            <td>{{m.in_stock}}</td>
+        </tr>
+        {% endfor %}
+            </tbody>
+            </table>
+{% endblock %}
